@@ -1,0 +1,80 @@
+<do-frame class="network" leftTitle="产业大数据决策支撑应用">
+  <do-container smallTitleTop='数据来源' smallTitleBottom='决策参考'>
+    <div class="topDiv">
+      <ul>
+        <li style="flex: 1.2;">
+          <img src="assets/images/topDiv.png" alt="">
+          <h4 style="margin-bottom: 1vh;">工信部</h4>
+          <div>汽车企业及产品数据&nbsp;
+            <span>13</span>万+&nbsp;条</div>
+          <div>应用推广目录数据&nbsp;
+            <span>6.5</span>万+&nbsp;条</div>
+        </li>
+        <li style="flex: 2;">
+          <img src="assets/images/topDiv.png" alt="">
+          <h4>外部委</h4>
+          <div style="float:left;">
+            <div>工商：企业基本数据&nbsp;
+              <span>21</span>万+&nbsp;条</div>
+            <div>公安：上牌数据&nbsp;
+              <span>1560</span>万+&nbsp;条</div>
+            <div>发改委：新能源汽车生产资质&nbsp;
+              <span>15</span>&nbsp;家</div>
+          </div>
+          <div style="float:right;">
+            <div>财政：补贴数据&nbsp;
+              <span>3.4</span>万+&nbsp;条</div>
+            <div>海口：进出口数据&nbsp;
+              <span>25</span>万+&nbsp;条</div>
+          </div>
+        </li>
+        <li style="flex: 1;">
+          <img src="assets/images/topDiv.png" alt="">
+          <h4 style="margin-bottom: 1vh;">地方</h4>
+          <div>政府：推广应用数据&nbsp;
+            <span>4.5</span>万+&nbsp;条</div>
+          <div>园区：产业规划数据&nbsp;
+            <span>1.5</span>万+&nbsp;条</div>
+        </li>
+        <li style="flex: 1;">
+          <img src="assets/images/topDiv.png" alt="">
+          <h4 style="margin-bottom: 1vh;">第三方机构</h4>
+          <div>协会：产销量数据&nbsp;
+            <span>3.8</span>万+&nbsp;条</div>
+          <div>联盟：充电设施数据&nbsp;
+            <span>1.5</span>万+&nbsp;条</div>
+        </li>
+      </ul>
+    </div>
+    <div class="bottomDiv">
+      <div class="rightContent">
+        <div class="bigTitle">技术发展路线图</div>
+        <div class="popularityRate">
+          <div class="divClass">{{theWord}}</div>
+        </div>
+        <div class="mapContent">
+          <div class="mapPictrue">
+            <do-echarts [options]="rightBottomLine" [theme]="theme"></do-echarts>
+          </div>
+          <div class="mapBtn">
+            <button *ngFor="let item of list; let i = index;" [ngClass]="{'leftBtn1Show': rBDisplayIs[i], 'leftBtn2Show': !rBDisplayIs[i]}"
+              style="margin-left: 1%; width: 15%;" (click)="rightBtnBottomClicked(i)">{{item}}</button>
+          </div>
+        </div>
+      </div>
+      <div class="leftline">
+        <div class="closingDate">截止到2017年11月数据</div>
+        <div class="lTopline">
+          <div class="ftthLine">
+            <do-echarts [options]="fixedChange" [theme]="theme"></do-echarts>
+          </div>
+        </div>
+        <div class="lBottomline">
+          <div class="leftBottomMap">
+            <do-echarts [options]="moveChange" [theme]="theme" [nameMap]="nameMap"></do-echarts>
+          </div>
+        </div>
+      </div>
+    </div>
+  </do-container>
+</do-frame>

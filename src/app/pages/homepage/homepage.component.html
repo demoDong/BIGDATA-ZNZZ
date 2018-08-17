@@ -1,0 +1,14 @@
+<div class="homepage">
+  <div class="button">
+    <button class="button1" (click)="btn1Clicked()"></button>
+    <button class="button2" (click)="btn2Clicked()"></button>
+    <button class="button3" (click)="btn3Clicked()"></button>
+    <button class="startVideo" (click)="startVideoClick($event)"></button>
+  </div>
+  <div class="overBg" [ngClass]="{overBgDisplay:overBgDisplay}" (click)="startVideoClick($event)">
+    <video id="video1" src="assets/video/test.mp4" width="60%" height="80%" controls="controls">
+      您的浏览器不支持 video 标签。
+    </video>
+  </div>
+  <div class="closeBtn" (click)="closePage()"></div>
+</div>

@@ -1,0 +1,61 @@
+<do-frame class="network" leftTitle="网络强国全景图">
+    <do-network smallTitleTop='数据来源' smallTitleBottom='数字经济'>
+      <div class="topDiv">
+        <div class="col-md-2 divClass" *ngFor="let item of Arr; let i = index;">
+          <img class="imgClass" src="assets/images/{{item.picName}}.png">
+          <button class="btn" (click)="onClick(i)">{{item.text}}
+            <span [ngClass]="{'fa':true, 'fa-caret-right': arrowShow[i], 'fa-caret-down': !arrowShow[i]}"></span>
+          </button>
+          <ul *ngIf="expression[i]">
+            <li *ngFor="let it of item.arrList">{{it}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottomDiv">
+        <div class="leftline">
+          <div class="lTopline">
+            <div class="ftthLine">
+              <do-echarts [options]="fixedChange" [theme]="theme"></do-echarts>
+            </div>
+            <div class="ftthButton">
+              <button [ngClass]="{'leftBtn1Show': displayIs, 'leftBtn2Show': !displayIs}" style="margin-left: 9%; width: 42%;" (click)="leftBtnTopClicked()">国际数字经济</button>
+              <button [ngClass]="{'leftBtn1Show': displayIsNormal, 'leftBtn2Show': !displayIsNormal}" style="margin-left: 2%; width: 42%;"
+                (click)="leftBtnTop1Clicked()">我国数字经济</button>
+            </div>
+          </div>
+          <div class="lBottomline">
+            <div class="leftBottomMap">
+              <do-echarts [options]="moveChange" [theme]="theme"></do-echarts>
+            </div>
+            <div class="mapButton">
+              <button [ngClass]="{'leftBtn1Show': rDisplayIs, 'leftBtn2Show': !rDisplayIs}" style="margin-left: 9%; width: 25%;" (click)="leftBtnBottomClicked()">工业</button>
+              <button [ngClass]="{'leftBtn1Show': rDdisplayIsNormal, 'leftBtn2Show': !rDdisplayIsNormal}" style="margin-left: 2%; width: 25%;"
+                (click)="leftBtnBottom1Clicked()">服务业</button>
+                <button [ngClass]="{'leftBtn1Show': rDdisplay1IsNormal, 'leftBtn2Show': !rDdisplay1IsNormal}" style="margin-left: 2%; width: 25%;"
+                (click)="leftBtnBottom2Clicked()">农业</button>
+            </div>
+          </div>
+        </div>
+        <div class="rightContent">
+          <div class="popularityRate">
+            <span>我国数字经济规模</span>
+            <br>
+            <span>{{theWord}}</span>
+            <span>亿元</span>
+          </div>
+          <div class="popularityRate">
+            <span>我国数字经济占GDP的比重</span>
+            <br>
+            <span>{{theWord1}}</span>
+            <span>%</span>
+          </div>
+          <div class="mapContent">
+            <div class="mapPictrue">
+              <do-echarts [options]="rightBottomLine" [theme]="theme" nameMap='china'></do-echarts>
+            </div>
+          </div>
+        </div>
+      </div>
+    </do-network>
+  </do-frame>
+  

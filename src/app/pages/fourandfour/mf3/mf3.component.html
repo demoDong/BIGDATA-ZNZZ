@@ -1,0 +1,66 @@
+<do-frame class="network" leftTitle="产业大数据决策支撑应用">
+    <do-container smallTitleTop='数据来源' smallTitleBottom='决策参考'>
+        <div class="topDiv">
+            <ul>
+                <li>
+                    <img src="assets/images/topDiv.png" alt="">
+                    <h4>工信部</h4>
+                    <div>项目数据&nbsp;
+                        <span>646</span>&nbsp;个</div>
+                </li>
+                <li>
+                    <img src="assets/images/topDiv.png" alt="">
+                    <h4>外部委</h4>
+                    <div>项目数据&nbsp;
+                        <span>220</span>&nbsp;个</div>
+                </li>
+                <li>
+                    <img src="assets/images/topDiv.png" alt="">
+                    <h4>第三方机构</h4>
+                    <div>企业信息&nbsp;
+                        <span>620</span>&nbsp;个</div>
+                </li>
+            </ul>
+        </div>
+        <div class="bottomDiv">
+            <div class="leftline">
+
+            </div>
+            <div class="rightContent">
+                <span class="rightTopTit">智能制造项目地图</span>
+                <div class="popularityRate">
+                    <span class="spanClass">{{zhinengOne}}</span>
+                    <br>
+                    <span>
+                        <b>{{zhinengOneData}}</b>个</span>
+                </div>
+                <div class="popularityRate">
+                    <span>{{zhinengTwo}}</span>
+                    <br>
+                    <span>
+                        <b>{{zhinengTwoData}}</b>个</span>
+                </div>
+                <div class="popularityRate">
+                    <span>{{zhinengThree}}</span>
+                    <br>
+                    <span>
+                        <b>{{zhinengThreeData}}</b>个</span>
+                </div>
+                <div class="popularityRate">
+                    <span>{{zhinengFour}}</span>
+                    <br>
+                    <span>
+                        <b>{{zhinengFourData}}</b>亿元</span>
+                </div>
+                <div class="mapContent">
+                    <div class="mapPictrue">
+                        <do-echarts [options]="mapOption" [theme]="theme" [nameMap]="nameMap"></do-echarts>
+                    </div>
+                    <div class="mapBtn">
+                        <span *ngFor="let item of list;let i = index" [ngClass]="{'active':active[i]}" (click)="rightBtnClicked(item,i)">{{item}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </do-container>
+</do-frame>

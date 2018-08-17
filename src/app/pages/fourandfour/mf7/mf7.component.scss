@@ -1,0 +1,143 @@
+do-echarts {
+    width: 100%;
+    height: 100%;
+    /deep/.echart {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.bottomDiv {
+    height: 59vh;
+    margin-top: 4vh;
+    position: relative;
+}
+
+.leftline {
+    float: left;
+    width: 40%;
+    height: 100%;
+    margin-top: -43%;
+    margin-left: 57%;
+    .lTopline {
+        height: 90%;
+        width: 100%;
+    }
+    .leftBtn1Show {
+        background: url('../../../../assets/images/mapBtn.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+        border: none;
+        color: #fff;
+        font-size: 2.0rem;
+    }
+    .leftBtn2Show {
+        background: url('../../../../assets/images/mapHoer.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+        border: none;
+        color: #fff;
+        font-size: 2.0rem;
+    }
+}
+
+.rightContent {
+    float: left;
+    width: 59%;
+    height: 100%;
+}
+
+.topDiv {
+    // width: 100%;
+    // height: 10.5vh;
+    // margin-top: 4.5vh;
+    // background: url(../../../../assets/images/guangdong.png) 45% 0 no-repeat;
+    // background-size: 96% 100%;
+    ul {
+        list-style: none;
+        display: inline-flex;
+        width: 100%;
+        height: 100%;
+        font-size: 1.6rem;
+        margin: 0px;
+        padding: 5vh 1vw 0px;
+        line-height: 1.3em;
+    }
+    li {
+        position: relative;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        margin: 0px 1vw;
+        background: -webkit-linear-gradient(to bottom, rgba(10, 25, 87, 1), rgba(14, 33, 101, 0.2));
+        /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(to bottom, rgba(10, 25, 87, 1), rgba(14, 33, 101, 0.2));
+        /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(to bottom, rgba(10, 25, 87, 1), rgba(14, 33, 101, 0.2));
+        /* Firefox 3.6 - 15 */
+        background: linear-gradient(to bottom, rgba(10, 25, 87, 1), rgba(14, 33, 101, 0.2));
+        /* 标准的语法 */
+        img {
+            position: absolute;
+            width: 0.3vw;
+            left: 2px;
+            top: middle;
+            height: 4vh;
+            top: 3vh;
+        }
+        h4 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 1vh;
+        }
+        span {
+            font-size: 2rem;
+            margin: 0px 6px;
+            color: #65FECA;
+            font-weight: bold;
+        }
+    }
+}
+
+.hot-table {
+    padding-top: 10px;
+    padding-left: 10px;
+    /deep/ .small {
+        padding: 0px !important;
+        margin-top: 7px;
+        margin-left: 68px;
+        border-radius: 10px;
+        height: 8px;
+        width: 8px;
+    }
+    /deep/ .middle {
+        padding: 0px !important;
+        margin-top: 4px;
+        margin-left: 65px;
+        border-radius: 10px;
+        height: 14px;
+        width: 14px;
+    }
+    /deep/ .big {
+        padding: 0px !important;
+        margin-top: 0px;
+        margin-left: 62px;
+        border-radius: 10px;
+        height: 20px;
+        width: 20px;
+    }
+    /deep/ .good {
+        background-color: rgb(6, 250, 169)
+    }
+    /deep/ .low {
+        background-color: rgb(210, 213, 8);
+    }
+    /deep/ .bad {
+        background-color: rgb(253, 0, 0);
+    }
+}
+
+.rightBottom_contain {
+    /deep/ .dataComing {
+        display: none;
+    }
+}

@@ -1,0 +1,54 @@
+<do-frame class="network" leftTitle="产业大数据决策支撑应用">
+    <do-container smallTitleTop='数据来源' smallTitleBottom='决策参考'>
+        <div class="topDiv">
+            <ul>
+                <li>
+                    <img src="../../../../assets/images/topDiv.png" alt="">
+                    <h4 style="margin-bottom: 2vh;">工信部</h4>
+                    <div>地方行业增长数据&nbsp;
+                        <span>110</span>&nbsp;条</div>
+                </li>
+                <li>
+                    <img src="../../../../assets/images/topDiv.png" alt="">
+                    <h4>外部委</h4>
+                    <div>工商：广东省规上企业基础信息&nbsp;
+                        <span>4</span>&nbsp;万余条</div>
+                    <div>能源局：广东省工业用电、综合能耗数据&nbsp;
+                        <span>120</span>&nbsp;条</div>
+                    <div>交通：广东省高速公路货运量信息&nbsp;
+                        <span>30</span>&nbsp;万余条</div>
+                </li>
+                <li>
+                    <img src="../../../../assets/images/topDiv.png" alt="">
+                    <h4 style="margin-bottom: 2vh;">第三方机构</h4>
+                    <div>广东省及各地市工业相关指标数据&nbsp;
+                        <span>304</span>&nbsp;条</div>
+                </li>
+            </ul>
+        </div>
+        <div class="bottomDiv">
+            <div class="rightCaontent">
+                <h3 style="text-align: center;font-size: 2.4rem;width: 53%;margin-top: 6vh">广东省区域-行业发展预警灯</h3>
+                <div class="hot-table">
+                    <hot-table height="540" width="800" fixedColumnsLeft="1" startRows="15" colWidths="100" contextMenu=false autoColumnSize=true
+                        hotId="hotInstance" [settings]="settings" [rowHeaders]="false" [colHeaders]="true" [columns]="columns"
+                        [data]="table"></hot-table>
+                </div>
+                <div style="padding-left: 8rem;">
+                    <img src="assets/images/tubiao.png" alt="">
+                </div>
+            </div>
+            <div class="leftline">
+                <div class="lTopline">
+                    <do-echarts [options]="fixedChange" [theme]="theme"></do-echarts>
+                </div>
+                <div class="mapButton">
+                    <button [ngClass]="{'leftBtn1Show': rDisplayIs, 'leftBtn2Show': !rDisplayIs}" style="margin-left: 9%; width: 43%;" (click)="leftBtnBottomClicked()">广东省制造业大数据指数</button>
+                    <button [ngClass]="{'leftBtn1Show': rDdisplayIsNormal, 'leftBtn2Show': !rDdisplayIsNormal}" style="margin-left: 2%; width: 43%;"
+                        (click)="leftBtnBottom1Clicked()">工业用电量</button>
+                </div>
+            </div>
+
+        </div>
+    </do-container>
+</do-frame>

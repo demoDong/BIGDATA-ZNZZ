@@ -1,0 +1,171 @@
+do-echarts {
+    width: 100%;
+    height: 100%;
+    /deep/.echart {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.bottomDiv {
+    height: 59vh;
+    margin-top: 4vh;
+    position: relative;
+}
+
+.leftline {
+    float: left;
+    width: 28%;
+    height: 100%;
+    margin-left: 70%;
+    margin-top: 2%;
+    background: url(../../../../assets/images/mf3Left.png) 45% 0 no-repeat;
+    background-size: 100% 90%;
+}
+
+.rightContent {
+    float: left;
+    margin-left: -99%;
+    width: 70%;
+    height: 100%;
+    .popularityRate {
+        float: left;
+        height: 8vh;
+        width: 22%;
+        margin-left: 3%;
+        line-height: 3.5vh;
+        background: url('../../../../assets/images/divBg.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+    .popularityRate span:nth-of-type(1) {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 2.4rem;
+    }
+    .popularityRate .spanClass {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem !important;
+        margin-top: 3px;
+        line-height: 20px;
+    }
+    .popularityRate span:nth-of-type(2) {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        line-height: 18px;
+        font-size: 1.8rem;
+        color: #a9caff;
+        b {
+            font-size: 3.0rem;
+            font-weight: bold;
+            color: #63F6C7;
+            font-family: 'lcb';
+        }
+    }
+    .mapContent {
+        width: 100%;
+        height: 48vh;
+        float: left;
+        .mapPictrue {
+            width: 100%;
+            height: 90%;
+        }
+        .mapBtn span {
+            font-size: 2.4rem;
+            margin-left: 21%;
+            display: inline-block;
+            margin-top: 1%;
+            cursor: pointer;
+            color: #999;
+        }
+        .mapBtn .active {
+            color: #fff !important;
+        }
+        .mapBtn {
+            width: 100%;
+            height: 10%;
+        }
+    }
+    .mapBg {
+        background: url('../../../../assets/images/mapBtn.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+    }
+    .mapHoer {
+        background: url('../../../../assets/images/mapHoer.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+    }
+    .rightTopTit {
+        font-size: 2.4rem;
+        float: left;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+}
+
+.topDiv {
+    // width: 100%;
+    // height: 11vh;
+    // margin-top: 4.5vh;
+    // background: url(../../../../assets/images/IntelligentManufacturing.png) 45% 0 no-repeat;
+    // background-size: 96% 100%;
+    ul {
+        list-style: none;
+        display: inline-flex;
+        width: 100%;
+        height: 100%;
+        font-size: 2.4rem;
+        margin: 0px;
+        padding: 5vh 1vw 0px;
+    }
+    li {
+        position: relative;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        margin: 0px 1vw;
+        padding: 1vh 0px;
+        background: -webkit-linear-gradient(to bottom, rgba(10, 25, 87, 1), rgba(14, 33, 101, 0.2));
+        /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(to bottom, rgba(10, 25, 87, 1), rgba(14, 33, 101, 0.2));
+        /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(to bottom, rgba(10, 25, 87, 1), rgba(14, 33, 101, 0.2));
+        /* Firefox 3.6 - 15 */
+        background: linear-gradient(to bottom, rgba(10, 25, 87, 1), rgba(14, 33, 101, 0.2));
+        /* 标准的语法 */
+        img {
+            position: absolute;
+            width: 0.3vw;
+            left: 2px;
+            top: middle;
+            height: 4vh;
+            top: 3vh;
+        }
+        h4 {
+            font-size: 2.4rem;
+            font-weight: bold;
+            margin-top: 1vh;
+        }
+        span {
+            font-size: 2.7rem;
+            margin: 0px 6px;
+            color: #65FECA;
+            font-weight: bold;
+        }
+    }
+}
+
+.mapContent {
+    height: 65vh !important;
+}

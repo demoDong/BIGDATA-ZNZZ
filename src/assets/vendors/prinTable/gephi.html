@@ -1,0 +1,180 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title> </title>
+	<style type="text/css">
+		#alltable{
+			width:1375px;
+			height: 848px;
+			font-size: 15px !important;
+		}
+		#alltable thead{
+			display: block;
+			width:100%;
+		}
+		table.tablesorter .header{
+		    background-image: url(bg.png);
+			background-color: #333333;
+			background-repeat: no-repeat;
+			border-left: 1px solid #FFF;
+			border-right: 1px solid #000;
+			border-top: 1px solid #FFF;
+			padding-left: 30px;
+			padding-top: 8px;
+			height: auto;
+		}
+		#alltable tbody{
+			width:100%;
+			display: block;
+			height:700px;
+			overflow-y: auto;
+		}
+		#alltable tbody::-webkit-scrollbar {
+			width: 10px;
+			background-color: transparent;
+			padding:0px 4px;
+			border-left:1px solid #666;
+		}
+
+		#alltable tbody::-webkit-scrollbar-thumb {
+			width:5px;
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+			background-color: #174088;
+		}
+		#alltable tr{
+			display:inline-table;
+			width:100%;
+		}
+		#alltable td{
+			height:30px;
+			line-height:30px;
+			display:inline-block;
+			width:14.05%;
+			padding:0px;
+			margin:0px;
+			border:1px solid #999;
+			font-size:15px;
+		}
+		#alltable th{
+			display:inline-block;
+			width:13.92%;
+			margin:0px;
+			border:1px solid #999;
+			color:#fff !important;
+			font-size:15px;
+		}
+		#alltable tbody tr{
+			color:#fff;
+		}
+		.tdBG{
+			background:url("etd-bd.png") no-repeat;
+		}
+		#chart171 #alltable td{
+			height:30px;
+			line-height:30px;
+			display:inline-block;
+			width:5.89%;
+			padding:0px;
+			margin:0px;
+			border:1px solid #999;
+		}
+		#chart171 #alltable td.lastTd{
+			width:37%;
+		}
+		#chart171 #alltable th{
+			display:inline-block;
+			width:3.59%;
+			margin:0px;
+			border:1px solid #999;
+			color:#fff !important;
+		}
+		#chart171 #alltable th:last-child{
+			width:35%;
+		}
+
+		#chart171 #alltable th.spec{
+			width:7.2% !important;
+		}
+		#chart171 #alltable td.tdBG1,#chart171 #alltable td.tdBG2,#chart171 #alltable td.tdBG3,#chart171 #alltable td.tdBG4{
+			width:9.53% !important;
+		}
+		#chart171 td{
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			overflow:hidden;
+		}
+		.tdBG1{
+			background:url("td-bd1.png") no-repeat;
+		}
+  </style>
+</head>
+<body>
+	<div id="chart171" style="width:1386px; height:842px; background:transparent; margin: auto;     display: block;"></div>	
+	<script src="jquery.min.js"></script>
+	<script src="jquery.tablesorter.js"></script>
+	<script>
+	
+function getData(year){
+    $.ajax({
+        url:"http://219.239.97.111:10075/api/351/query?params=Year:e:" + year,
+        async:false,
+        success:function(data){
+            if(data.status == 000){
+                Data = data.result;
+                var PerIindexAvg = Data[0].PerIindexAvg;
+                var BasicConditionIndexAvg = Data[0].BasicConditionIndexAvg;
+                var DevIndexAvg = Data[0].DevIndexAvg;
+                $.each(Data,function(index,value){
+                    $("#alltable tbody").append('<tr data-id="'+index+'"><td class="focusBg">'+value.Rank+'</td><td class="focusBg">'+value.Province+'</td><td class="focusBg">'+value.City+'</td><td class="focusBg">'+value.Country+'</td><td class="tdBG1">'+value.CompetitivenessIndex+'</td><td class="tdBG2">'+value.BasicConditionIndex+'</td><td class="tdBG3">'+value.PerIindex+'</td><td class="tdBG4">'+value.DevIndex+'</td><td class="lastTd">'+value.PrimeIndustry+"</td></tr>");
+                })
+                $.each($(".tdBG1"),function(){
+                    $(this).css({"background-size":$(this).text()+"% 26px","background-position":"0px 2px"});
+                })
+                $.each($(".tdBG2"),function(){
+                    if($(this).text() < BasicConditionIndexAvg){
+                        $(this).css({"background":'url("td-bd3.png") no-repeat',"background-size":$(this).text()+"% 26px","background-position":"0px 2px"});
+
+                    }else{
+                        $(this).css({"background":'url("td-bd2.png") no-repeat',"background-size":$(this).text()+"% 26px","background-position":"0px 2px"});
+
+                    }
+                })
+                $.each($(".tdBG3"),function(){
+                    if($(this).text() < PerIindexAvg){
+                        $(this).css({"background":'url("td-bd3.png") no-repeat',"background-size":$(this).text()+"% 26px","background-position":"0px 2px"});
+
+                    }else{
+                        $(this).css({"background":'url("td-bd2.png") no-repeat',"background-size":$(this).text()+"% 26px","background-position":"0px 2px"});
+
+                    }
+                })
+                $.each($(".tdBG4"),function(){
+                    if($(this).text() < DevIndexAvg){
+                        $(this).css({"background":'url("td-bd3.png") no-repeat',"background-size":$(this).text()+"% 26px","background-position":"0px 2px"});
+
+                    }else{
+                        $(this).css({"background":'url("td-bd2.png") no-repeat',"background-size":$(this).text()+"% 26px","background-position":"0px 2px"});
+
+                    }
+                })
+            }else{
+                alert("数据加载失败");
+            }
+        },
+        error:function(){
+            alert("数据加载失败");
+        }
+    });
+}
+
+
+    $("#chart171").append('<div class="containerBox"><table id="alltable" class="tablesorter" cellspacing="0">   <thead>   <tr> <th>排名</th>  <th>省</th>   <th>市</th>   <th>县</th>   <th class="spec">竞争力指数</th>   <th class="spec">基础条件指数</th>  <th class="spec">运行绩效指数</th> <th class="spec">发展活力指数</th> <th>主导产业</th> </tr>   </thead>   <tbody></tbody>   </table>   </div>');
+
+    //页面数据初始化
+    getData(2017);
+    $("#alltable").tablesorter();
+
+	</script>
+</body>
+</html>

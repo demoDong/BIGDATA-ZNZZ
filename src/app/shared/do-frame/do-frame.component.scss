@@ -1,0 +1,150 @@
+.title {
+    position: relative;
+    font-family: 'ZaoZi';
+    width: 100%;
+    float: left;
+    margin-top: 0%;
+    p-menubar {
+        float: left;
+        .ui-menubar {
+            background: transparent;
+            border-color: transparent;
+            p-menubarsub {
+                .ui-menuitem-link {
+                    color: #fff;
+                    font-size: 2rem;
+                }
+                .ui-menuitem-active>.ui-menuitem-link {
+                    background: transparent;
+                    .ui-submenu-icon {
+                        color: #FB2D0B;
+                    }
+                }
+                p-menubarsub {
+                    .ui-menu-list {
+                        background: rgba(22, 58, 141, 0.6);
+                        border-color: transparent;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dashboard {
+    float: left;
+    height: 83vh;
+    width: 96vw;
+    margin-top: 1vh;
+    overflow: hidden;
+}
+
+.title p {
+    font-size: 4rem;
+}
+
+.title>button {
+    font-size: 2.4rem;
+}
+
+.title>.sumtitle {
+    font-size: 3rem;
+}
+
+.title p {
+    width: 29.5%;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    float: left; // background: url('../assets/images/logo.png') 0 center no-repeat;
+    background-size: auto 75%;
+    letter-spacing: 0.3vh;
+}
+
+.title>button {
+    background: url('../../../assets/images/daohangR.png') no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    font-family: 'Microsoft YaHei';
+    float: left;
+    color: #72beff;
+    margin-top: 1.8%;
+}
+
+.btnDisplay {
+    visibility: hidden;
+}
+
+.title>.sumtitle {
+    background: url('../../../assets/images/blockTitle.png') no-repeat;
+    background-size: auto 100%;
+    font-family: 'Microsoft YaHei';
+    color: #fff;
+    letter-spacing: 0.7vh;
+    font-weight: bold;
+    width: 70%;
+    height: 6vh;
+    margin-top: 0%;
+    margin-left: 1.5%;
+    padding-left: 4%;
+    padding-top: 0.8%;
+    text-align: left;
+}
+
+.title>.exit {
+    background: url('../../../assets/images/headerButton.png') no-repeat;
+    background-size: 100% 100%;
+    min-width: 10%;
+    margin-left: 1%;
+    color: #fff;
+    outline: none;
+}
+
+.footer {
+    width: 4vw;
+    float: left;
+    span {
+        float: left;
+        margin-left: 0.3vw;
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+        width: 2.5vw;
+        height: 2.5vw;
+        background: url('../../../assets/images/footerHome.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.footer>button {
+    float: left;
+    margin-top: 1vh;
+    max-width: 3vw;
+    background: url('../../../assets/images/footerBg.png') no-repeat;
+    background-size: 100% 100%;
+    color: #4385ed;
+    border: none;
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 2vh 0.5vw;
+    line-height: 3vh;
+}
+
+.footerClass {
+    background: url('../../../assets/images/selectFooter.png') no-repeat !important;
+    background-size: 100% 100% !important;
+    color: #65feca !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.rightBtn {
+    background: url('../../../assets/images/headerButton.png') no-repeat !important;
+    background-size: 100% 100% !important;
+    min-width: 15%;
+    color: #fff !important;
+    outline: none !important;
+}

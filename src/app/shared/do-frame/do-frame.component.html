@@ -1,0 +1,15 @@
+<div class="title">
+    <!-- <button class="rightBtn" style="margin-left:70%" [ngClass]="{'btnDisplay': headerController}">{{headerControllerText}}</button> -->
+    <button class="rightBtn" style="margin-left:70%;visibility:hidden;">{{headerControllerText}}</button>
+    <button class="exit" (click)="quitClicked()">返回</button>
+    <button class="sumtitle">{{leftTitle}}</button>
+</div>
+<div class="footer">
+    <span (click)="homeClick()"></span>
+    <button [ngClass]="{'footerClass':footController[0]}" (click)="dataClicked()">产业大数据库</button>
+    <button (click)="makeClicked()" [ngClass]="{'footerClass':footController[1]}">制造强国全景图</button>
+    <button (click)="netClicked()" [ngClass]="{'footerClass':footController[2]}">网络强国全景图</button>
+</div>
+<div class="dashboard">
+    <ng-content></ng-content>
+</div>

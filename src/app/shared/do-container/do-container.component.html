@@ -1,0 +1,35 @@
+<div class="topPart">
+  <!-- 上方框架，h3是左上方小标题，content是外部嵌入内容，changeNorm_type的div是分页按钮，
+      more的button是分页按钮展开功能 -->
+  <div class="boxModel topModel">
+    <h3 *ngIf="showTitle">{{smallTitleTop}}</h3>
+    <ng-content select=".topDiv"></ng-content>
+    <div class="changeNorm_type" *ngIf="showChangeNorm_type" [ngClass]="{true:'buttonShow'}[isShow]">
+      <button *ngFor="let item of tabItems; let i = index" [ngClass]="{true:'buttonClick'}[isClick[i]]" (click)="onBtnClick(i)">{{item}}</button>
+    </div>
+    <button class="more fa fa-plus" *ngIf="showChangeNorm_type" (click)="onButtonShow()"></button>
+  </div>
+</div>
+
+<div class="bottomPart">
+  <div class="leftModel">
+    <h3 *ngIf="showTitle">导航目录</h3>
+    <div class="treeDiv">
+      <h3>中国制造2025十大领域</h3>
+      <p-tree [value]="treeTwo" selectionMode="single" (onNodeSelect)="nodeSelect($event)"></p-tree>
+      <h3>中国制造2025五大工程</h3>
+      <p-tree [value]="treeOne" selectionMode="single" (onNodeSelect)="nodeSelect($event)"></p-tree>
+      <h3>工业经济运行监测分析</h3>
+      <p-tree [value]="treeThree" selectionMode="single" (onNodeSelect)="nodeSelect($event)"></p-tree>
+    </div>
+  </div>
+
+  <div class="boxModel bottomModel">
+    <h3 *ngIf="showTitle">{{smallTitleBottom}}</h3>
+    <ng-content select=".bottomDiv"></ng-content>
+    <div class="changeNorm_type" *ngIf="showChangeNorm_type" [ngClass]="{true:'buttonShow'}[isShow]">
+      <button *ngFor="let item of tabItems; let i = index" [ngClass]="{true:'buttonClick'}[isClick[i]]" (click)="onBtnClick(i)">{{item}}</button>
+    </div>
+    <button class="more fa fa-plus" *ngIf="showChangeNorm_type" (click)="onButtonShow()"></button>
+  </div>
+</div>

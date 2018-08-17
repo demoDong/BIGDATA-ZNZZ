@@ -1,0 +1,71 @@
+<do-frame class="network" leftTitle="产业大数据决策支撑应用">
+    <do-container smallTitleTop='数据来源' smallTitleBottom='决策参考'>
+        <div class="topDiv">
+            <ul>
+                <li style="flex: 1.2;">
+                    <img src="assets/images/topDiv.png" alt="">
+                    <h4>工信部</h4>
+                    <div>道路机动车辆生产企业及产品公告，新能源汽车推广应用目录数据共&nbsp;
+                        <span>4330</span>+&nbsp;条</div>
+                </li>
+                <li style="flex: 2;">
+                    <img src="assets/images/topDiv.png" alt="">
+                    <h4>外部委</h4>
+                    <div>工商：企业基本信息&nbsp;
+                        <span>4100</span>+&nbsp;条&nbsp;&nbsp;&nbsp;财税：纳入财政补助范围的车型数据&nbsp;
+                        <span>3427</span>+&nbsp;条</div>
+                </li>
+                <li style="flex: 1;">
+                    <img src="assets/images/topDiv.png" alt="">
+                    <h4>地方</h4>
+                    <div>产业规划数据近&nbsp;
+                        <span>千</span>+&nbsp;条</div>
+                    <div>推广应用数据&nbsp;
+                        <span>450</span>+&nbsp;条</div>
+                </li>
+                <li style="flex: 1;">
+                    <img src="assets/images/topDiv.png" alt="">
+                    <h4>第三方机构</h4>
+                    <div>协会：产销量数据&nbsp;
+                        <span>3800</span>+&nbsp;条</div>
+                </li>
+            </ul>
+        </div>
+        <div class="bottomDiv">
+            <div class="rightContent">
+                <span class="rightTopTit">产业发展地图</span>
+                <div class="popularityRate">
+                    <span>{{writeOne}}</span>
+                    <br>
+                    <span>{{writeOneData}}</span>
+                    <span>亿元</span>
+                </div>
+                <div class="planningGoals">
+                    <span>{{writeTwo}}</span>
+                    <br>
+                    <span>{{writeTwoData}}</span>
+                    <span>家</span>
+                </div>
+                <div class="planningGoals">
+                    <span>{{writeThree}}</span>
+                    <br>
+                    <span>{{writeThreeData}}</span>
+                    <span>条（现有）</span>
+                </div>
+                <div class="mapContent">
+                    <div class="mapPictrue">
+                        <do-echarts [options]="mapOption" [theme]="theme" [nameMap]="nameMap"></do-echarts>
+                    </div>
+                </div>
+            </div>
+            <div class="leftline">
+                <div class="lTopline">
+                    <do-echarts [options]="fixedChange" [theme]="theme"></do-echarts>
+                </div>
+                <div class="lBottomline">
+                    <do-echarts [options]="pieOption2" [theme]="theme"></do-echarts>
+                </div>
+            </div>
+        </div>
+    </do-container>
+</do-frame>

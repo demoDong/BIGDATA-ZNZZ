@@ -1,0 +1,189 @@
+do-echarts {
+  width: 100%;
+  height: 100%;
+  /deep/.echart {
+    height: 100%;
+    width: 100%;
+  }
+}
+.leftBtn1Show{
+  background: url('../../../../assets/images/mapBtn.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #fff;
+  font-size: 2.0rem;
+}
+.leftBtn2Show {
+  background: url('../../../../assets/images/mapHoer.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #fff;
+  font-size: 2.0rem;
+}
+.bottomDiv {
+  height: 59vh;
+  margin-top: 4vh;
+  position: relative;
+}
+.leftline {
+  float: left;
+  width: 40%;
+  height: 100%;
+  .lTopline {
+      height: 50%;
+      width: 100%;
+      .ftthLine {
+          width: 100%;
+          height: 100%;
+      }
+      .ftthButton .leftBtn1Show{
+          background: url('../../../../assets/images/mapBtn.png') 0 0 no-repeat;
+          background-size: 100% 100%;
+          border: none;
+          color: #fff;
+          font-size: 2.0rem;
+      }
+      .ftthButton .leftBtn2Show {
+          background: url('../../../../assets/images/mapHoer.png') 0 0 no-repeat;
+          background-size: 100% 100%;
+          border: none;
+          color: #fff;
+          font-size: 2.0rem;
+      }
+      
+  }
+  .lBottomline{
+      height: 50%;
+      width: 100%;
+      .leftBottomMap {
+          width: 100%;
+          height: 100%;
+      }
+      .mapButton {
+          width: 100%;
+          height: 14%;
+      }
+  }
+}
+.rightContent {
+  float: left;
+  width: 60%;
+  height: 100%;
+  .bigTitle{
+      position: absolute;
+      left: 29%;
+      font-size: 2.4rem;
+  }
+  .popularityRate{
+      float: left;
+      height: 10%;
+      width: 78%;
+      margin-left: 13%;
+      font-size: 2.4rem;
+      margin-top: 4%;
+      line-height: 2.4rem;
+      text-align: center;
+      line-height: 3.5vh;
+      background: url('../../../../assets/images/buttonimg.png') 0 0 no-repeat;
+      background-size: 100% 100%;
+      .divClass {
+          line-height: 5rem;
+      }
+  }
+  .mapContent {
+      width: 100%;
+      height: 100%;
+      float: left;
+      .mapPictrue {
+          width: 100%;
+          height: 100%;
+      }
+  }
+  .mapBg{
+      background: url('../../../../assets/images/mapBtn.png') 0 0 no-repeat;
+      background-size: 100% 100%;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+  }
+  .mapHoer {
+      background: url('../../../../assets/images/mapHoer.png') 0 0 no-repeat;
+      background-size: 100% 100%;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+  }
+}
+
+.col-md-2.divClass {
+  float: left;
+  margin-left: 2vw;
+}
+
+button.btn {
+  font-size: 2rem;
+  width: 11vw;
+  background: rgba(41, 111, 220, 0.3);
+  border: none;
+  color: #fff;
+  background-image: url('../../../../assets/images/buttonimg.png');
+  background-size: 100% 100%;
+  span {
+      display: inline-block;
+      width: 2rem;
+      height:2rem;
+    }
+}
+
+.network {
+  /deep/.boxModel.topModel {
+    position: relative !important;
+    z-index: 10000 !important;
+  }
+}
+
+.topDiv ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+.topDiv ul li:hover {
+  background: #296fdd;
+}
+
+;
+ul {
+  width: 11vw;
+  background: rgba(22, 58, 141, 0.6);
+  max-height: 20vh;
+  overflow-y: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border: 0;
+}
+
+ul::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 5px;
+  background: #174088;
+  border: 0;
+  border-radius: 5px;
+}
+
+ul::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+img.imgClass {
+  margin-left: 3vw;
+  margin-top: 6vh;
+  margin-bottom: 1vh;
+}
+
+

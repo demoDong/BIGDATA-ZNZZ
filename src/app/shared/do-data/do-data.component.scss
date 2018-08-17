@@ -1,0 +1,207 @@
+.topPart {
+    float: left;
+    .topModel {
+        float: left;
+        width: 94vw;
+        height: 16vh;
+        margin-bottom: 2vh;
+        background: url('../../../assets/images/netWorkLeftTop.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.bottomPart {
+    float: left;
+    .leftModel {
+        float: left;
+        width: 17vw;
+        height: 65vh;
+        margin-right: 1vw;
+        background: url('../../../assets/images/netWorkRight.png') no-repeat;
+        background-size: 100% 100%;
+        h3 {
+            font-size: 2.4rem;
+            color: #fff;
+            margin-top: 0.7vh;
+            margin-left: 4%;
+            letter-spacing: 4px;
+        }
+        .treeDiv {
+            width: 90%;
+            margin: 0px 5%;
+            margin-top: 2vh;
+            height: 58vh;
+            overflow-y: auto;
+            background: rgba(14, 36, 120, 0.2);
+            h3 {
+                font-size: 2rem;
+                color: #fff;
+                margin: 0px;
+                padding: 4%;
+                background: url('../../../assets/images/navigationTitle.png') no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    .bottomModel {
+        position: relative;
+        float: left;
+        width: 76vw;
+        height: 65vh;
+        background: url('../../../assets/images/netWorkLeftBottom.png') no-repeat;
+        background-size: 100% 100%;
+        .industrialModel {
+            width: 10%;
+            height: 10%;
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            .modelList {
+                float: left;
+                li {
+                    list-style-type: none;
+                }
+            }
+            .displayIs {
+                display: block;
+                width: 300px;
+                height: 300px;
+            }
+        }
+        .bottomDiv {
+            .industrialDiv {
+                position: absolute;
+                z-index: 999;
+                width: 6vw;
+                height: 10vh;
+            }
+            .class1 {
+                top: 24vh;
+                left: 28vw;
+            }
+            .class2 {
+                top: 24vh;
+                left: 46vw;
+            }
+            .class3 {
+                top: 4vh;
+                left: 54vw;
+            }
+            #informationDiv {
+                position: absolute;
+                width: 15vw;
+                height: 15vh;
+                top: 1vh;
+                left: 15vw;
+                z-index: 998;
+            }
+            .informationDivHide {
+                display: none;
+            }
+        }
+    }
+}
+
+.treeClass {
+    display: none !important;
+}
+
+.treeClass2 {
+    display: none !important;
+}
+
+.treeClass4 {
+    display: none !important;
+}
+
+.treeClass6 {
+    display: none !important;
+}
+
+.treeClass8 {
+    display: none !important;
+}
+
+.treeClass10 {
+    display: none !important;
+}
+
+.boxModel {
+    position: relative;
+    color: #fff;
+    h3 {
+        position: absolute;
+        font-size: 2.8rem;
+        top: 0.8vh;
+        left: 1%;
+        letter-spacing: 4px;
+    }
+    .changeNorm_type {
+        position: absolute;
+        bottom: 0px;
+        max-width: 60%;
+        height: 4vh;
+        overflow: hidden;
+        button {
+            background: url('../../../assets/images/bottom_btn.png') no-repeat;
+            padding: 5px 20px;
+            background-size: 100% 100%;
+            color: #286EDD;
+            text-align: center;
+            height: 4vh;
+            font-size: 2rem;
+            border: none;
+            margin-left: 16px;
+            outline: none;
+        }
+        button:hover {
+            background-image: url('../../../assets/images/selectFooter.png');
+            color: #fff;
+        }
+        .buttonClick {
+            background-image: url('../../../assets/images/selectFooter.png');
+            color: #fff;
+        }
+        button.more {
+            color: #fff;
+            font-size: 2rem;
+            position: absolute;
+            z-index: 900;
+            right: -2em;
+        }
+    }
+    button.more {
+        background: url('../../../assets/images/bottom_btn.png') no-repeat;
+        padding: 5px 20px;
+        background-size: 100% 100%;
+        color: #286EDD;
+        text-align: center;
+        height: 4vh;
+        font-size: 2rem;
+        border: none;
+        margin-left: 16px;
+        outline: none;
+    }
+    button.more:hover {
+        background-image: url('../../../assets/images/selectFooter.png');
+        color: #fff;
+    }
+    .buttonClick {
+        background-image: url('../../../assets/images/selectFooter.png');
+        color: #fff;
+    }
+    button.more {
+        color: #fff;
+        font-size: 2rem;
+        position: absolute;
+        bottom: 0px;
+        left: 60%;
+    }
+    .buttonShow {
+        height: auto !important;
+        background: rgba(22, 58, 141, 1);
+    }
+    .bottomDiv {
+        margin-top: 10vh;
+    }
+}

@@ -1,0 +1,48 @@
+<do-frame class="network" leftTitle="产业大数据决策支撑应用">
+  <do-network smallTitleTop='数据来源' smallTitleBottom='国家“十三五”规划对标'>
+    <div class="topDiv">
+      <div class="col-md-2 divClass" *ngFor="let item of Arr; let i = index;">
+        <img class="imgClass" src="assets/images/{{item.picName}}.png">
+        <button class="btn" (click)="onClick(i)">{{item.text}}
+          <span [ngClass]="{'fa':true, 'fa-caret-right': arrowShow[i], 'fa-caret-down': !arrowShow[i]}"></span>
+        </button>
+        <ul *ngIf="expression[i]">
+          <li *ngFor="let it of item.arrList">{{it}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottomDiv">
+      <div class="leftline">
+        <div class="lTopline">
+          <do-echarts [options]="fixedChange" [theme]="theme"></do-echarts>
+        </div>
+        <div class="lBottomline">
+          <do-echarts [options]="moveChange" [theme]="theme"></do-echarts>
+        </div>
+      </div>
+      <div class="rightContent">
+        <div class="popularityRate">
+          <span>{{popularRate}}</span>
+          <br>
+          <span>{{rateNumber}}</span>
+          <span>%</span>
+        </div>
+        <div class="planningGoals">
+          <span>国家“十三五”规划目标</span>
+          <br>
+          <span>{{goalNumber}}</span>
+          <span>%</span>
+        </div>
+        <div class="mapContent">
+          <div class="mapPictrue">
+            <do-echarts [options]="mapOption" [theme]="theme" [nameMap]="nameMap"></do-echarts>
+          </div>
+          <div class="mapBtn">
+            <button style="margin-left: 33%;" (click)="fixedBtnClicked()" [ngClass]="{'mapBg': fixedshowNormal, 'mapHoer': displayIs}">固定宽带普及率</button>
+            <button style="margin-left: 10%;" (click)="moveBtnClicked()" [ngClass]="{'mapBg': moveshowNormal,mapHoer: displayIsMove}">移动宽带普及率</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </do-network>
+</do-frame>

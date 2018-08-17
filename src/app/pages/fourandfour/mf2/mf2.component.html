@@ -1,0 +1,60 @@
+<do-frame class="network" leftTitle="产业大数据决策支撑应用">
+  <do-container smallTitleTop='数据来源' smallTitleBottom='决策参考'>
+    <div class="topDiv">
+      <div class="col-md-2 divClass" *ngFor="let item of Arr; let i = index;">
+        <img class="imgClass" src="assets/images/{{item.picName}}.png">
+        <button class="btn" (click)="onClick(i)">{{item.text}}
+          <span [ngClass]="{'fa':true, 'fa-caret-right': arrowShow[i], 'fa-caret-down': !arrowShow[i]}"></span>
+        </button>
+        <ul *ngIf="expression[i]">
+          <li *ngFor="let it of item.arrList">{{it}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottomDiv">
+      <do-echarts class="options3" [options]="nw2Option3" [theme]="theme" nameMap='china'></do-echarts>
+      <div class="imgClass"></div>
+
+      <div class="textClass">
+        <div class="buttonClass1">
+          <span class="spanClass">创新能力</span>
+          <br/>
+          <span class="spanClass1">完成重大标志性项目
+            <b>{{theWord}}</b>个</span>
+          <br/>
+          <span>推进重大标志性项目
+            <b>{{theWord1}}</b>个</span>
+        </div>
+        <div class="buttonClass2">
+          <span class="spanClass">质量效应</span>
+          <br/>
+          <span>品牌培育示范企业
+            <b>{{theWord2}}</b>家</span>
+          <br/>
+          <span>产业集群区域品牌
+            <br/>市场占有率提高
+            <b>{{theWord3}}</b>%</span>
+        </div>
+        <div class="buttonClass3">
+          <span class="spanClass">两化融合</span>
+          <br/>
+          <span class="spanClass1">数字化研发工具普及率
+            <b>{{theWord4}}</b>%</span>
+          <br/>
+          <span>关键工序数控化率
+            <b>{{theWord5}}</b>%</span>
+        </div>
+        <div class="buttonClass4">
+          <span class="spanClass">绿色发展</span>
+          <br/>
+          <span class="spanClass1">规上单位能耗比2015年下降
+            <b>5.47</b>%</span>
+          <br/>
+          <span>工业固体废物综合利用率
+            <b>{{theWord7}}</b>%</span>
+        </div>
+      </div>
+
+    </div>
+  </do-container>
+</do-frame>

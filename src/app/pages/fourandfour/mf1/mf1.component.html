@@ -1,0 +1,26 @@
+<do-frame class="network" leftTitle="产业大数据决策支撑应用">
+  <do-container smallTitleTop='数据来源' smallTitleBottom='网络强国发展指数国际对标'>
+    <div class="topDiv">
+    </div>
+    <div class="bottomDiv">
+      <do-echarts [options]="rightRadia" [theme]="theme"></do-echarts>
+      <div class="radialeft">
+        <p class="firstEchelon">
+          <span class="circleDot">.</span>
+          <span>{{firstLadder}}</span>
+          <span *ngFor="let itemOne of firstEchelon,let i = index" [ngClass]="{'fontColor': colorHiddenOne[i]}">{{itemOne}}</span>
+        </p>
+        <p class="secondEchelon">
+          <span class="circleDot">.</span>
+          <span>{{TwoLadder}}</span>
+          <span *ngFor="let itemTwo of secondEchelon,let i = index" [ngClass]="{'fontColor': colorHiddenTwo[i]}">{{itemTwo}}</span>
+        </p>
+        <p class="thirdEchelon">
+          <span class="circleDot">.</span>
+          <span>{{ThreeLadder}}</span>
+          <span *ngFor="let itemThird of thirdEchelon,let i = index" [ngClass]="{'fontColor': colorHiddenThree[i]}">{{itemThird}}</span>
+        </p>
+      </div>
+    </div>
+  </do-container>
+</do-frame>

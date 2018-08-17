@@ -1,0 +1,77 @@
+<do-frame class="network" leftTitle="网络强国全景图">
+  <do-network smallTitleTop='数据来源' smallTitleBottom='网络安全'>
+    <div class="topDiv">
+      <div class="col-md-2 divClass" *ngFor="let item of Arr; let i = index;">
+        <img class="imgClass" src="assets/images/{{item.picName}}.png">
+        <button class="btn" (click)="onClick(i)">{{item.text}}
+          <span [ngClass]="{'fa':true, 'fa-caret-right': arrowShow[i], 'fa-caret-down': !arrowShow[i]}"></span>
+        </button>
+        <ul *ngIf="expression[i]">
+          <li *ngFor="let it of item.arrList">{{it}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottomDiv">
+      <div class="leftline">
+        <div class="lTopline">
+          <div class="ftthLine">
+            <do-echarts [options]="fixedChange" [theme]="theme"></do-echarts>
+          </div>
+          <div class="ftthButton">
+            <button [ngClass]="{'leftBtn1Show': displayIs, 'leftBtn2Show': !displayIs}" style="margin-left: 9%; width: 25%;" (click)="leftBtnTopClicked()">各省情况</button>
+            <button [ngClass]="{'leftBtn1Show': displayIsNormal, 'leftBtn2Show': !displayIsNormal}" style="margin-left: 2%; width: 25%;"
+              (click)="leftBtnTop1Clicked()">类型占比</button>
+            <button [ngClass]="{'leftBtn1Show': display1IsNormal, 'leftBtn2Show': !display1IsNormal}" style="margin-left: 2%; width: 26%;"
+              (click)="leftBtnTop2Clicked()">统计与展示</button>
+          </div>
+        </div>
+        <div class="lBottomline">
+          <div class="leftBottomMap">
+            <do-echarts [options]="moveChange" [theme]="theme"></do-echarts>
+          </div>
+          <div class="mapButton">
+            <button [ngClass]="{'leftBtn1Show': rDisplayIs, 'leftBtn2Show': !rDisplayIs}" style="margin-left: 9%; width: 25%;" (click)="leftBtnBottomClicked()">设备厂商</button>
+            <button [ngClass]="{'leftBtn1Show': rDdisplayIsNormal, 'leftBtn2Show': !rDdisplayIsNormal}" style="margin-left: 2%; width: 25%;"
+              (click)="leftBtnBottom1Clicked()">设备类型</button>
+            <button [ngClass]="{'leftBtn1Show': rDdisplayIsNormal, 'leftBtn2Show': !rDdisplayIsNormal}" style="margin-left: 2%; width: 25%;"
+              (click)="leftBtnBottom1Clicked()">漏洞排名</button>
+          </div>
+        </div>
+      </div>
+      <div class="rightContent">
+        <div class="popularityRate">
+          <span>企业总数</span>
+          <br>
+          <span>{{theWord}}</span>
+          <span>个</span>
+        </div>
+        <div class="popularityRate">
+          <span>域名总数</span>
+          <br>
+          <span>{{theWord1}}</span>
+          <span>个</span>
+        </div>
+        <div class="popularityRate">
+          <span>IP总数</span>
+          <br>
+          <span>{{theWord2}}</span>
+          <span>个</span>
+        </div>
+        <div class="mapContent">
+          <div class="mapPictrue">
+            <do-echarts [options]="rightBottomLine" [theme]="theme" nameMap='china'></do-echarts>
+            <div class="divClass">
+              <span class="spanClass">国内网站数量TOP10省份</span>
+              <ul class="ulClass">
+                <li *ngFor="let item1 of liList; let i = index">
+                  <span class="leftSpan">{{item1.name}}</span>
+                  <span class="rightSpan">{{item1.value}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </do-network>
+</do-frame>

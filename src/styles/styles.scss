@@ -1,0 +1,445 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+
+/* This file is for setting global styles  */
+
+$border: 2px #0091fc solid;
+@import 'variables';
+@import url('../../node_modules/font-awesome/css/font-awesome.min.css');
+@import url('../../node_modules/primeng/resources/themes/omega/theme.css');
+@import url('../../node_modules/primeng/resources/primeng.min.css');
+@import url('../../node_modules/bootstrap/dist/css/bootstrap.css');
+@import url('../../node_modules/handsontable/dist/handsontable.full.css');
+button {
+    outline: none !important;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'ZaoZi';
+    src: url('../assets/fonts/zaozi.otf');
+}
+
+@font-face {
+    font-family: 'lcb';
+    src: url('../assets/fonts/lcb.otf');
+}
+
+body {
+    // background: url('../assets/images/bg.jpg') no-repeat; 
+    background: url('../assets/images/bodyBG.jpg') no-repeat;
+    background-size: cover;
+    font-family: 'Microsoft YaHei';
+    height: 100%;
+}
+
+do-echarts {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /deep/ .echart {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    border: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 5px;
+    background: #174088;
+    border: 0;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+// tree插件样式修改(dataroam页)
+// @media screen and (min-width: 1366px) {
+//     .dataroamPage .ui-widget {
+//         font-size: 1.5em;
+//     }
+// }
+// @media screen and (min-width: 1920px) {
+//     .dataroamPage .ui-widget {
+//         font-size: 2em;
+//     }
+// }
+.dataroamPage .ui-widget {
+    font-size: 2em;
+}
+
+.dataroamPage .ui-tree {
+    width: 100%;
+}
+
+.dataroamPage .ui-widget-content {
+    border: 0;
+    background: transparent;
+    color: #fff;
+}
+
+.dataroamPage .ui-tree .ui-tree-container {
+    height: 68vh;
+}
+
+// .dataroamPage .ui-tree-container::-webkit-scrollbar {
+//     width: 5px;
+//     height: 5px;
+//     background: transparent;
+//     border: 0;
+// }
+// .dataroamPage .ui-tree-container::-webkit-scrollbar-thumb {
+//     width: 5px;
+//     height: 5px;
+//     background: #174088;
+//     border: 0;
+//     border-radius: 5px;
+// }
+// .dataroamPage .ui-tree-container::-webkit-scrollbar-corner {
+//     background: transparent;
+// }
+// 多选框样式
+.implementation .ui-g {
+    width: 14%;
+    max-height: 70vh;
+    margin-top: 3vh;
+    margin-left: 1%;
+    margin-bottom: 0px;
+    overflow: auto;
+    float: left;
+}
+
+// .implementation .ui-g::-webkit-scrollbar {
+//     width: 5px;
+//     height: 5px;
+//     background: transparent;
+//     border: 0;
+// }
+// .implementation .ui-g::-webkit-scrollbar-thumb {
+//     width: 5px;
+//     height: 5px;
+//     background: #174088;
+//     border: 0;
+//     border-radius: 5px;
+// }
+// .implementation .ui-g::-webkit-scrollbar-corner {
+//     background: transparent;
+// }
+.ui-g {
+    .ui-g-12 {
+        min-width: max-content;
+    }
+    p-checkbox {
+        color: #fff !important;
+        .ui-chkbox-label {
+            white-space: nowrap;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+// 下拉框组件样式
+.implementation .rightPart {
+    .top {
+        .ui-multiselect .ui-multiselect-label {
+            margin-bottom: 0px;
+        }
+        p-dropdown {
+            .ui-dropdown {
+                width: 11vw !important;
+                border-color: #296FDE;
+                .ui-dropdown-label {
+                    background: #184088;
+                    border: 1px solid #296FDE;
+                    color: #fff;
+                }
+                .ui-dropdown-trigger {
+                    background: transparent;
+                    color: #fff;
+                    border: 0px;
+                }
+                .ui-dropdown-panel {
+                    border-color: #296FDE;
+                    .ui-dropdown-list {
+                        background: #184088;
+                        color: #fff;
+                    }
+                    .ui-dropdown-item:not(.ui-state-highlight):hover {
+                        background: #296FDE;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        p-multiselect {
+            .ui-multiselect {
+                width: 10vw !important;
+                border-color: #296FDE;
+                .ui-multiselect-label {
+                    background: #184088;
+                    border: 1px solid #296FDE;
+                    color: #fff;
+                }
+                .ui-multiselect-trigger {
+                    background: transparent;
+                    color: #fff;
+                    border: 0px;
+                }
+                .ui-multiselect-panel {
+                    border-color: #296FDE;
+                    background: #184088;
+                    .ui-multiselect-list {
+                        background: #184088;
+                        color: #fff;
+                    }
+                    .ui-multiselect-item:not(.ui-state-highlight):hover {
+                        background: #296FDE;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .middle {
+        .ui-multiselect .ui-multiselect-label {
+            margin-bottom: 0px;
+        }
+        p-multiselect {
+            .ui-multiselect {
+                width: 100% !important;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-color: #296FDE;
+                .ui-multiselect-label {
+                    background: #184088;
+                    border: 1px solid #296FDE;
+                    color: #fff;
+                }
+                .ui-multiselect-trigger {
+                    background: transparent;
+                    color: #fff;
+                    border: 0px;
+                }
+                .ui-multiselect-panel {
+                    border-color: #296FDE;
+                    background: #184088;
+                    .ui-multiselect-list {
+                        background: #184088;
+                        color: #fff;
+                    }
+                    .ui-multiselect-item:not(.ui-state-highlight):hover {
+                        background: #296FDE;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.handsontable th {
+    font-size: 2rem;
+    background: #184088;
+    border: 1px solid #296FDE;
+    color: #fff;
+}
+
+.handsontable .htColumnHeaders {
+    border: 1px solid #173F97;
+}
+
+.handsontable thead th.ht__highlight {
+    background-color: #296FDE;
+}
+
+.handsontable tr {
+    background: transparent;
+}
+
+.handsontable td {
+    background: #040f30;
+    border: 1px solid #296FDE;
+    color: #fff;
+    text-align: center;
+}
+
+.handsontable tr:first-child td {
+    border: 1px solid #296FDE;
+}
+
+.handsontable tr:first-child th {
+    border: 1px solid #296FDE;
+}
+
+.handsontable td:first-of-type {
+    border: 1px solid #296FDE;
+    ;
+}
+
+.handsontable th:last-child {
+    border: 1px solid #296FDE;
+    ;
+}
+
+// .ht_master {
+//     .wtHolder::-webkit-scrollbar {
+//         width: 5px;
+//         height: 5px;
+//         background: transparent;
+//         border: 0;
+//         border-radius: 5px;
+//     }
+//     .wtHolder::-webkit-scrollbar-thumb {
+//         width: 5px;
+//         height: 5px;
+//         background: #174088;
+//         border: 0;
+//         border-radius: 5px;
+//     }
+//     .wtHolder::-webkit-scrollbar-corner {
+//         background: transparent;
+//     }
+// }
+.htContextMenu table.htCore {
+    border: 0;
+    border-radius: 5px;
+}
+
+.htContextMenu table tbody tr td {
+    background: #174088;
+    border: 0;
+    border-radius: 5px;
+}
+
+.htContextMenu table tbody tr td.current {
+    background: #296FDE;
+    border: 0;
+    border-radius: 5px;
+}
+
+.handsontable td.area {
+    background-color: #296FDE;
+}
+
+.dataComing {
+    max-width: 21%;
+}
+
+// 新版样式右侧树插件样式
+.bottomPart .leftModel {
+    .treeDiv {
+        p-tree {
+            .ui-widget-content {
+                width: 100%;
+                background: transparent;
+                color: #fff;
+                border-color: transparent;
+                font-size: 2rem;
+            }
+            .ui-state-highlight {
+                background: transparent;
+            }
+            .activeLi {
+                .ui-treenode-content {
+                    background: #173E8D;
+                }
+                .ui-treenode-children {
+                    .ui-treenode-content {
+                        background: transparent;
+                    }
+                }
+            }
+            .disAbleLi {
+                .ui-treenode-content,
+                .ui-treenode-label:not(.ui-state-highlight):hover {
+                    color: #777 !important;
+                }
+                .ui-treenode-children {
+                    .ui-treenode-content,
+                    .ui-treenode-label:not(.ui-state-highlight):hover {
+                        color: #777 !important;
+                    }
+                }
+            }
+            .ui-treenode-content {
+                padding: 1% 0px;
+            }
+            .ui-tree .ui-treenode-content.ui-treenode-selectable .ui-treenode-label:not(.ui-state-highlight):hover {
+                border-color: transparent;
+                background: transparent;
+                color: #fff;
+            }
+        }
+    }
+}
+
+// 网络首页表格样式
+.radialeft {
+    .ui-widget-content {
+        background: transparent;
+        color: #ffffff;
+        font-size: 1.6rem;
+    }
+    .ui-datatable tbody>tr.ui-widget-content.ui-datatable-odd {
+        background: rgba(22, 59, 139, 0.2);
+    }
+    .ui-datatable th.ui-state-default {
+        background: rgba(22, 59, 139, 1);
+        border-color: #143783;
+        color: #ffffff;
+        font-size: 1.6rem;
+    }
+    .ui-datatable-scrollable-header-box {
+        margin-right: 0px !important;
+    }
+    .ui-datatable .ui-datatable-thead>tr>th,
+    .ui-datatable .ui-datatable-tfoot>tr>td,
+    .ui-datatable .ui-datatable-data>tr>td {
+        border-color: #143783;
+    } // .ui-datatable-scrollable-body::-webkit-scrollbar {
+    //     width: 5px;
+    //     height: 5px;
+    //     background: transparent;
+    //     border: 0;
+    // }
+    // .ui-datatable-scrollable-body::-webkit-scrollbar-thumb {
+    //     width: 5px;
+    //     height: 5px;
+    //     background: #174088;
+    //     border: 0;
+    //     border-radius: 5px;
+    // }
+    // .ui-datatable-scrollable-body::-webkit-scrollbar-corner {
+    //     background: transparent;
+    // }
+}
+
+.topPart {
+    display: none;
+}
+
+.leftModel,
+.boxModel.bottomModel {
+    height: 83vh !important;
+}
+
+.treeDiv,
+.bottomDiv {
+    height: 77vh !important;
+}
+
+.mapContent {
+    // height: 64vh !important;
+}

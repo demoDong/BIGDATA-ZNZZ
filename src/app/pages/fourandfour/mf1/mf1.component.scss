@@ -1,0 +1,49 @@
+do-echarts {
+  width: 100%;
+  height: 100%;
+  /deep/.echart {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.bottomDiv {
+  height: 59vh;
+  margin-top: 4vh;
+  position: relative;
+}
+.fontColor{
+    color: #BF5022;
+    font-size: 2.4rem;
+}
+
+.radialeft {
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    top:0;
+}
+.radialeft p{
+    font-size: 2.4rem;
+    letter-spacing:0.5vw;
+    padding-left: 5%;
+    margin-top: 10%;
+}
+
+.radialeft p:nth-child(3) {
+  position: absolute;
+  top: 47%;
+  left: 5%;
+  font-size: 2.2rem;
+  letter-spacing: 0.5vw;
+  width: 45%;
+}
+
+.circleDot {
+    display: inline-block;
+    width: 1.5rem;
+    height:1.5rem;
+    border-radius: 50%;
+    background: #66FBD5;
+    margin-right: 2%;
+}

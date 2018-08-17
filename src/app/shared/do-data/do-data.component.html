@@ -1,0 +1,51 @@
+<div class="topPart">
+  <!-- 上方框架，h3是左上方小标题，content是外部嵌入内容，changeNorm_type的div是分页按钮，
+    more的button是分页按钮展开功能 -->
+  <div class="boxModel topModel">
+    <h3 *ngIf="showTitle">{{smallTitleTop}}</h3>
+    <ng-content select=".topDiv"></ng-content>
+    <div class="changeNorm_type" *ngIf="showChangeNorm_type" [ngClass]="{true:'buttonShow'}[isShow]">
+      <button *ngFor="let item of tabItems; let i = index" [ngClass]="{true:'buttonClick'}[isClick[i]]" (click)="onBtnClick(i)">{{item}}</button>
+    </div>
+    <button class="more fa fa-plus" *ngIf="showChangeNorm_type" (click)="onButtonShow()"></button>
+  </div>
+</div>
+<div class="bottomPart">
+  <div class="leftModel">
+    <h3 *ngIf="showTitle">七大子库</h3>
+    <div class="treeDiv">
+      <h3 (click)="treeShow()">宏观库</h3>
+      <p-tree [ngClass]="{'treeClass': treeClass1}" [value]="macroLibraryeSelect" selectionMode="single" (onNodeSelect)="nodeSelected($event)"></p-tree>
+      <h3 (click)="treeShow1()">区域库</h3>
+      <p-tree [ngClass]="{'treeClass2': treeClass3}" [value]="regionLibrarySelect" selectionMode="single" (onNodeSelect)="nodeSelected($event)"></p-tree>
+      <h3>行业库</h3>
+      <p-tree [value]="industryLibrarySelect" selectionMode="single" (onNodeSelect)="nodeSelected($event)"></p-tree>
+      <h3 (click)="treeShow4()">园区库</h3>
+      <p-tree [ngClass]="{'treeClass8': treeClass9}" [value]="ParkLibrarySelect" selectionMode="single" (onNodeSelect)="nodeSelected($event)"></p-tree>
+      <h3 (click)="treeShow5()">企业库</h3>
+      <p-tree [ngClass]="{'treeClass10': treeClass11}" [value]="enterpriseLibrarySelect" selectionMode="single" (onNodeSelect)="nodeSelected($event)"></p-tree>
+      <h3 (click)="treeShow2()">产品库</h3>
+      <p-tree [ngClass]="{'treeClass4': treeClass5}" [value]="productLibrarySelect" selectionMode="single" (onNodeSelect)="nodeSelected($event)"></p-tree>
+      <h3 (click)="treeShow3()">国际库</h3>
+      <p-tree [ngClass]="{'treeClass6': treeClass7}" [value]="internationaLibrarySelect" selectionMode="single" (onNodeSelect)="nodeSelected($event)"></p-tree>
+    </div>
+  </div>
+
+  <div class="boxModel bottomModel">
+    <h3 *ngIf="showTitle">{{smallTitleBottom}}</h3>
+    <div class="bottomDiv">
+      <img id="imageId" alt="" src="assets/images/data0.png" style="margin-left: 2%;margin-top: 1%;">
+      <!-- <div *ngFor="let item of divNameArr;let i = index" class="industrialDiv {{classArr[i]}}" (click)="industrialClicked(i)"></div>
+      <div id="informationDiv" [ngClass] = "{'informationDivHide':informationDivHide}">
+        <div *ngFor="let item1 of keyArr;let k = index">
+          <span>{{item1}} : </span>
+          <span>{{valueArr[k]}}</span>
+        </div>
+      </div> -->
+    </div>
+    <div class="changeNorm_type" *ngIf="showChangeNorm_type" [ngClass]="{true:'buttonShow'}[isShow]">
+      <button *ngFor="let item of tabItems; let i = index" [ngClass]="{true:'buttonClick'}[isClick[i]]" (click)="onBtnClick(i)">{{item}}</button>
+    </div>
+    <button class="more fa fa-plus" *ngIf="showChangeNorm_type" (click)="onButtonShow()"></button>
+  </div>
+</div>

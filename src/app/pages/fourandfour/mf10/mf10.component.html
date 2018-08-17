@@ -1,0 +1,50 @@
+<do-frame class="network" leftTitle="产业大数据决策支撑应用">
+  <do-container smallTitleTop='数据来源' smallTitleBottom='决策参考'>
+    <div class="topDiv">
+      <div class="col-md-2 divClass" *ngFor="let item of Arr; let i = index;">
+        <img class="imgClass" src="assets/images/{{item.picName}}.png">
+        <button class="btn" (click)="onClick(i)">{{item.text}}
+          <span [ngClass]="{'fa':true, 'fa-caret-right': arrowShow[i], 'fa-caret-down': !arrowShow[i]}"></span>
+        </button>
+        <ul *ngIf="expression[i]">
+          <li *ngFor="let it of item.arrList">{{it}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottomDiv">
+      <div class="rightContent">
+        <div class="mapContent">
+          <div class="mapPictrue">
+            <do-echarts [options]="rightBottomLine" [theme]="theme" [nameMap]="nameMap"></do-echarts>
+          </div>
+        </div>
+      </div>
+      <div class="leftline">
+        <span class="littleTitle">
+          截止到2017年11月数据
+        </span>
+        <div class="lTopline">
+          <div class="ftthLine">
+            <div class="popularityRate">
+              <div class="divClass">手机国内出货量
+                <br>
+                <span>
+                  <b>4.91</b>亿部</span>
+              </div>
+              <div class="divClass">国产手机出货量占比
+                <br>
+                <span>
+                  <b>88.8</b>%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lBottomline">
+          <div class="leftBottomMap">
+            <iframe src="assets/vendors/gephi_mobile_new/gephi.html" scrolling="no"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </do-container>
+</do-frame>

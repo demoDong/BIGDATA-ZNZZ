@@ -1,0 +1,70 @@
+<do-frame class="network" leftTitle="网络强国全景图">
+  <do-network smallTitleTop='数据来源' smallTitleBottom='网络设施'>
+    <div class="topDiv">
+      <div class="col-md-2 divClass" *ngFor="let item of Arr; let i = index;">
+        <img class="imgClass" src="assets/images/{{item.picName}}.png">
+        <button class="btn" (click)="onClick(i)">{{item.text}}
+          <span [ngClass]="{'fa':true, 'fa-caret-right': arrowShow[i], 'fa-caret-down': !arrowShow[i]}"></span>
+        </button>
+        <ul *ngIf="expression[i]">
+          <li *ngFor="let it of item.arrList">{{it}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottomDiv">
+      <div class="leftline">
+        <div class="lTopline">
+          <div class="ftthLine">
+            <do-echarts [options]="fixedChange" [theme]="theme"></do-echarts>
+          </div>
+          <div class="ftthButton">
+            <button [ngClass]="{'leftBtn1Show': displayIs, 'leftBtn2Show': !displayIs}" style="margin-left: 9%; width: 43%;" (click)="leftBtnTopClicked()">FTTH覆盖家庭数量</button>
+            <button [ngClass]="{'leftBtn1Show': displayIsNormal, 'leftBtn2Show': !displayIsNormal}" style="margin-left: 2%; width: 43%;"
+              (click)="leftBtnTop1Clicked()">4G基站数量</button>
+          </div>
+        </div>
+        <div class="lBottomline">
+          <div class="leftBottomMap">
+            <do-echarts [options]="moveChange" [theme]="theme" [nameMap]="nameMap"></do-echarts>
+          </div>
+          <div class="mapButton">
+            <button [ngClass]="{'leftBtn1Show': rDisplayIs, 'leftBtn2Show': !rDisplayIs}" style="margin-left: 9%; width: 43%;" (click)="leftBtnBottomClicked()">骨干直联点分布</button>
+            <button [ngClass]="{'leftBtn1Show': rDdisplayIsNormal, 'leftBtn2Show': !rDdisplayIsNormal}" style="margin-left: 2%; width: 43%;"
+            (click)="leftBtnBottom1Clicked()">网络性能</button>
+          </div>
+        </div>
+      </div>
+      <div class="rightContent">
+        <div class="popularityRate">
+          <span style="padding-left: 10%;">FTTH覆盖家庭数</span>
+          <br>
+          <span style="margin-left: 10%;">{{theWord}}</span>
+          <span>万个</span>
+        </div>
+        <div class="popularityRate">
+          <span style="padding-left: 28%;">4G基站数</span>
+          <br>
+          <span style="margin-left: 31%;">{{theWord1}}</span>
+          <span>万个</span>
+        </div>
+        <div class="popularityRate">
+          <span style="padding-left: 9%;">国家级骨干直联点</span>
+          <br>
+          <span style="margin-left: 37%;">{{theWord2}}</span>
+          <span>个</span>
+        </div>
+        <div class="popularityRate">
+          <span style="padding-left: 23%;">国际海陆缆</span>
+          <br>
+          <span style="margin-left: 30%;">{{theWord3}}</span>
+          <span>万个</span>
+        </div>
+        <div class="mapContent">
+          <div class="mapPictrue">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </do-network>
+</do-frame>

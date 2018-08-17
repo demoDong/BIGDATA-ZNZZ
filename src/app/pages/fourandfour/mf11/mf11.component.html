@@ -1,0 +1,57 @@
+<do-frame class="network" leftTitle="产业大数据决策支撑应用">
+  <do-container smallTitleTop='数据来源' smallTitleBottom='决策参考'>
+    <div class="topDiv">
+      <div class="col-md-2 divClass" *ngFor="let item of Arr; let i = index;">
+        <img class="imgClass" src="assets/images/{{item.picName}}.png">
+        <button class="btn" (click)="onClick(i)">{{item.text}}
+          <span [ngClass]="{'fa':true, 'fa-caret-right': arrowShow[i], 'fa-caret-down': !arrowShow[i]}"></span>
+        </button>
+        <ul *ngIf="expression[i]">
+          <li *ngFor="let it of item.arrList">{{it}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottomDiv">
+      <div class="rightContent">
+        <div class="mapContent">
+          <div class="mapPictrue">
+            <do-echarts [options]="rightBottomLine" [theme]="theme" [nameMap]="nameMap"></do-echarts>
+          </div>
+          <div class="mapBtn">
+            <button class="leftBtnShow" *ngFor="let item of list; let i = index;" [ngClass]="{'leftBtnHover': leftBtnHover[i]}" (click)="mapBtnClicked(i)">{{item}}</button>
+          </div>
+        </div>
+      </div>
+      <div class="leftline">
+        <span class="littleTitle">
+          截止到2016年数据
+        </span>
+        <div class="lTopline">
+          <div class="ftthLine">
+            <div class="popularityRate">
+              <div class="divClass">优势一类企业数量
+                <br>
+                <span>
+                  <b>{{youshiOne}}</b>个</span>
+              </div>
+              <div class="divClass">优势二类企业数量
+                <br>
+                <span>
+                  <b>{{youshiTwo}}</b>个</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lBottomline">
+          <div class="rightBottom">
+            <do-echarts [options]="rightBottomPie"></do-echarts>
+          </div>
+          <div class="rightBottomBtn">
+            <button class="rightBottomBtnShow" *ngFor="let item of rightBottomList; let i = index;" [ngClass]="{'rightBottomBtnHover': rightBottomBtnHover[i]}"
+              (click)="rightBottomBtnClicked(i)">{{item}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </do-container>
+</do-frame>
